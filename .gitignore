@@ -1,6 +1,11 @@
 # App Related
 config/config.js
 
+# Firebase
+firebase.json
+.firebaserc
+.firebase
+
 # Logs
 logs
 *.log
