@@ -1,0 +1,36 @@
+.menuPicker p {
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: #3c4249;
+  text-transform: uppercase;
+}
+
+.menuPicker ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  gap: 0.5rem;
+}
+
+.menuPicker li {
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.menuPicker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menuPicker li.selected {
+  border-color: #0941cf;
+}

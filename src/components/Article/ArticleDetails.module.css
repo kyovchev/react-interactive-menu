@@ -1,0 +1,48 @@
+.details header {
+  width: 40rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.details header button,
+.details header a {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+}
+
+.content {
+  width: 40rem;
+  margin: 2rem auto;
+  background-color: #b6cad5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.info {
+  padding: 0 3rem 3rem 3rem;
+}
+
+.info h1 {
+  color: #0941cf;
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #fff;
+}

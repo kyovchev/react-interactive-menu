@@ -1,0 +1,53 @@
+.buttonArticle {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.buttonArticle:hover .article,
+.buttonArticle:hover .article h2 {
+  background-color: #097ccf;
+  color: #fff;
+}
+
+.article {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  gap: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  background-color: #b6cad5;
+}
+
+.articleContent {
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article h2 {
+  font-size: 1.15rem;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  color: #0941cf;
+}
+
+.articlePrice {
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+}
