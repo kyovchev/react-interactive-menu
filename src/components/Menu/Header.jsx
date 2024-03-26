@@ -1,6 +1,7 @@
 import { useIsFetching } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { AnimatePresence } from "framer-motion";
 
 import Cart from "../Cart/Cart.jsx";
 import CartButton from "../Cart/CartButton.jsx";
@@ -19,7 +20,7 @@ export default function Header({ children }) {
   return (
     <>
       <div className={styles.loading}>{fetching > 0 && <progress />}</div>
-      {showCart && <Cart />}
+      <AnimatePresence>{showCart && <Cart />}</AnimatePresence>
       <header className={styles.header}>
         <div className={styles.title}>
           <h1 onClick={() => navigate("/menu")}>

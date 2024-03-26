@@ -4,6 +4,10 @@
   font-weight: bold;
 }
 
+.total > span {
+  display: inline-block;
+}
+
 .price {
   color: #097ccf;
 }

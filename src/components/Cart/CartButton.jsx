@@ -12,8 +12,11 @@ export default function CartButton() {
 
   return (
     <Button
+      animate={total > 0 ? { scale: [1, 1.2, 1] } : null}
+      transition={{ duration: 0.3 }}
       type="button"
       style="button"
+      key={total}
       onClick={() => dispatch(cartActions.toggleCart())}
     >
       Cart {formatPrice(total)}

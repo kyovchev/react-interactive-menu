@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import styles from "./Button.module.css";
 
@@ -10,9 +11,9 @@ export default function Button({ type, style, children, ...props }) {
 
   if (type == "button") {
     content = (
-      <button className={className} {...props}>
+      <motion.button className={className} {...props}>
         {children}
-      </button>
+      </motion.button>
     );
   } else if (type == "submit") {
     content = (

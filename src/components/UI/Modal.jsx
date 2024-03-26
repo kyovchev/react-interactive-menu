@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 
 import styles from "./Modal.module.css";
 
@@ -16,9 +17,20 @@ export default function Modal({ children, onClose }) {
   }, []);
 
   return createPortal(
-    <dialog className={styles.modal} ref={dialog} onClose={onClose}>
+    <motion.dialog
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      className={styles.modal}
+      ref={dialog}
+      onClose={onClose}
+    >
       {children}
-    </dialog>,
+    </motion.dialog>,
     document.getElementById("modal")
   );
 }

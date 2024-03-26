@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 
 import Button from "../UI/Button.jsx";
 import Modal from "../UI/Modal.jsx";
@@ -32,7 +33,15 @@ export default function Cart() {
           </div>
 
           <p className={styles.total}>
-            Total: <span className={styles.price}>{formatPrice(total)}</span>
+            Total:{" "}
+            <motion.span
+              key={total}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 0.2 }}
+              className={styles.price}
+            >
+              {formatPrice(total)}
+            </motion.span>
           </p>
         </>
       )}
