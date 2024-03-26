@@ -1,4 +1,4 @@
-import Button from "../UI/Button";
+import Button from "../UI/Button.jsx";
 
 import introImage from "../../assets/intro.jpg";
 

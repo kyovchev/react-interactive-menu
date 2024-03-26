@@ -1,4 +1,5 @@
 import { useState, useLayoutEffect } from "react";
+import { useDispatch } from "react-redux";
 import {
   Outlet,
   useNavigate,
@@ -20,11 +21,14 @@ import {
 } from "../../query_utils/db.js";
 import { QUERY_STALE_TIMES } from "../../../config/config.js";
 import { formatPrice } from "../../utils/formatters.js";
+import { cartActions } from "../../store/cart.js";
 
 import styles from "./ArticleDetails.module.css";
 
 export default function ArticleDetails() {
   useLayoutEffect(() => window.scrollTo(0, 0), []);
+
+  const dispatch = useDispatch();
 
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -65,6 +69,11 @@ export default function ArticleDetails() {
 
   function handleDelete() {
     mutate({ id: params.id, token });
+  }
+
+  function handleAddToCart(event, article) {
+    event.preventDefault();
+    dispatch(cartActions.addArticle(article));
   }
 
   let content;
@@ -122,6 +131,13 @@ export default function ArticleDetails() {
               <p className={styles.price}>{formatPrice(data.price)}</p>
             </div>
             <p className={styles.description}>{data.description}</p>
+            <Button
+              type="button"
+              style="button"
+              onClick={(event) => handleAddToCart(event, data)}
+            >
+              Add to cart
+            </Button>
           </div>
         </div>
       </>
