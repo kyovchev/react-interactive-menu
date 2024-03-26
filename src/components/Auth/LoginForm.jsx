@@ -13,6 +13,7 @@ export default function LoginForm({ inputData, children }) {
           type="text"
           id="email"
           name="email"
+          autoComplete="email"
           defaultValue={inputData?.email ?? ""}
         />
       </p>

@@ -22,7 +22,7 @@ export default function Login() {
 
   return (
     <Modal onClose={() => navigate("../")}>
-      <LoginForm /*onSubmit={handleSubmit}*/ method="POST">
+      <LoginForm method="POST">
         {isSubmitting && "Submitting..."}
         {!isSubmitting && (
           <>
