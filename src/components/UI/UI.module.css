@@ -23,15 +23,3 @@
   align-items: center;
   gap: 2rem;
 }
-
-.contentSection {
-  margin: 0;
-  padding: 0 10%;
-}
-
-.contentSection.h2 {
-  font-size: 2rem;
-  font-family: "Quicksand", sans-serif;
-  margin: 2rem auto;
-  color: #097ccf;
-}
