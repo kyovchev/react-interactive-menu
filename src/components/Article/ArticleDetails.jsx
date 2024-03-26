@@ -11,6 +11,7 @@ import Header from "../Menu/Header.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
 import Modal from "../UI/Modal.jsx";
 import Button from "../UI/Button.jsx";
+import { FormActions } from "../UI/Form.jsx";
 
 import {
   fetchArticle,
@@ -20,7 +21,6 @@ import {
 import { QUERY_STALE_TIMES } from "../../../config/config.js";
 import { formatPrice } from "../../utils/formatters.js";
 
-import uiStyles from "../UI/UI.module.css";
 import styles from "./ArticleDetails.module.css";
 
 export default function ArticleDetails() {
@@ -137,7 +137,7 @@ export default function ArticleDetails() {
             Do you really want to delete this article? This action cannot be
             undone.
           </p>
-          <div className={uiStyles.formAction}>
+          <FormActions>
             {isPendingDeletion && <p>Deleting, please wait...</p>}
             {!isPendingDeletion && (
               <>
@@ -149,7 +149,7 @@ export default function ArticleDetails() {
                 </Button>
               </>
             )}
-          </div>
+          </FormActions>
           {isErrorDeleting && (
             <ErrorBlock
               title="Failed to delete article"

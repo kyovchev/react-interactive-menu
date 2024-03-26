@@ -1,10 +1,12 @@
 import { Form } from "react-router-dom";
 
-import uiStyles from "../UI/UI.module.css";
+import { FormActions } from "../UI/Form";
+
+import styles from "../UI/Form.module.css";
 
 export default function LoginForm({ inputData, children }) {
   return (
-    <Form className={uiStyles.form} action="/menu/login" method="POST">
+    <Form className={styles.form} action="/menu/login" method="POST">
       <p>
         <label htmlFor="email">Email</label>
         <input
@@ -25,7 +27,7 @@ export default function LoginForm({ inputData, children }) {
         />
       </p>
 
-      <p className={uiStyles.formActions}>{children}</p>
+      <FormActions>{children}</FormActions>
     </Form>
   );
 }

@@ -1,8 +1,7 @@
 import { useState } from "react";
 
+import Form, { FormActions } from "../UI/Form.jsx";
 import MenuPicker from "../Menu/MenuPicker.jsx";
-
-import uiStyles from "../UI/UI.module.css";
 
 export default function ArticleForm({ inputData, onSubmit, children }) {
   const [selectedMenu, setSelectedMenu] = useState(inputData?.menu);
@@ -21,7 +20,7 @@ export default function ArticleForm({ inputData, onSubmit, children }) {
   }
 
   return (
-    <form className={uiStyles.form} onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <p>
         <label htmlFor="title">Title</label>
         <input
@@ -57,7 +56,7 @@ export default function ArticleForm({ inputData, onSubmit, children }) {
         />
       </p>
 
-      <p className={uiStyles.formActions}>{children}</p>
-    </form>
+      <FormActions>{children}</FormActions>
+    </Form>
   );
 }
