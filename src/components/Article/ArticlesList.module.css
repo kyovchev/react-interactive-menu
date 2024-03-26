@@ -1,0 +1,6 @@
+.articlesList {
+  max-width: 60rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+}

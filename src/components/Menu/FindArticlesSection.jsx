@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import LoadingIndicator from "../UI/LoadingIndicator.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
 import Article from "../Article/Article.jsx";
+import ArticlesList from "../Article/ArticlesList.jsx";
 import MenuPicker from "../Menu/MenuPicker.jsx";
 
 import { searchArticles } from "../../query_utils/db.js";
@@ -51,13 +52,13 @@ export default function FindArticlesSection() {
 
   if (data) {
     content = (
-      <ul className={uiStyles.articlesList}>
+      <ArticlesList>
         {data.map((article) => (
           <li key={article.id}>
             <Article article={article} />
           </li>
         ))}
-      </ul>
+      </ArticlesList>
     );
   }
 
