@@ -24,12 +24,14 @@
   width: 1.5rem;
   height: 1.5rem;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .title h1 {
   font-size: 1.5rem;
   color: #0941cf;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
 }
 
 .header nav {

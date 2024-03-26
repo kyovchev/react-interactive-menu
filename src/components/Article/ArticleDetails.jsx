@@ -178,11 +178,7 @@ export default function ArticleDetails() {
         </Modal>
       )}
       <Outlet />
-      <Header>
-        <Button type="link" style="button" to="/menu">
-          Home
-        </Button>
-      </Header>
+      <Header />
       <article className={styles.details}>{content}</article>
     </>
   );
