@@ -15,7 +15,6 @@ export default function HotOffersSection() {
     queryFn: ({ signal, queryKey }) =>
       fetchLatestArticles({ signal, ...queryKey[1] }),
     staleTime: QUERY_STALE_TIMES.articles,
-    // gcTime: 1000
   });
 
   let content = <p>There are no hot offers at this moment.</p>;

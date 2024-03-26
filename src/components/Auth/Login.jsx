@@ -16,7 +16,6 @@ export default function Login() {
   const { isError } = useMutation({
     mutationFn: login,
     onSuccess: () => {
-      //queryClient.invalidateQueries({ queryKey: ["events"] });
       navigate("/menu");
     },
   });
