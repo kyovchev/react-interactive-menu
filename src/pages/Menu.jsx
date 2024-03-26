@@ -1,11 +1,11 @@
 import { Outlet, useRouteLoaderData, Form } from "react-router-dom";
 
-import Header from "./Header.jsx";
-import FindArticlesSection from "./FindArticlesSection.jsx";
-import HotOffersSection from "./HotOffersSection.jsx";
-import Button from "../UI/Button.jsx";
+import Header from "../components/Menu/Header.jsx";
+import FindArticlesSection from "../components/Menu/FindArticlesSection.jsx";
+import HotOffersSection from "../components/Menu/HotOffersSection.jsx";
+import Button from "../components/UI/Button.jsx";
 
-export default function Home() {
+export default function MenuPage() {
   const token = useRouteLoaderData("root");
 
   return (

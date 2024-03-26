@@ -1,10 +1,10 @@
-import Button from "../UI/Button.jsx";
+import Button from "../components/UI/Button.jsx";
 
-import introImage from "../../assets/intro.jpg";
+import introImage from "../assets/intro.jpg";
 
 import styles from "./Intro.module.css";
 
-export default function Intro() {
+export default function IntroPage() {
   return (
     <section
       className={styles.contentSection}

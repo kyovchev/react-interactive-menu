@@ -1,9 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { QueryClientProvider } from "@tanstack/react-query";
 
-import Home from "./components/Menu/Home.jsx";
+import MenuPage from "./pages/Menu.jsx";
 import Root from "./components/Root/Root.jsx";
-import Intro from "./components/Intro/Intro.jsx";
+import IntroPage from "./pages/Intro.jsx";
 import ArticleDetails from "./components/Article/ArticleDetails.jsx";
 import NewArticle from "./components/Article/NewArticle.jsx";
 import EditArticle, {
@@ -27,11 +27,11 @@ function App() {
       element: <Root />,
       errorElement: <NotFoundBoundary />,
       children: [
-        { index: true, element: <Intro /> },
-        { path: "intro", element: <Intro /> },
+        { index: true, element: <IntroPage /> },
+        { path: "intro", element: <IntroPage /> },
         {
           path: "menu",
-          element: <Home />,
+          element: <MenuPage />,
           children: [
             {
               path: "login",
