@@ -1,12 +1,12 @@
 import { useNavigate, useRouteLoaderData } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 
-import Modal from "../UI/Modal.jsx";
-import ArticleForm from "./ArticleForm.jsx";
-import ErrorBlock from "../UI/ErrorBlock.jsx";
-import Button from "../UI/Button.jsx";
+import Modal from "../components/UI/Modal.jsx";
+import ArticleForm from "../components/Article/ArticleForm.jsx";
+import ErrorBlock from "../components/UI/ErrorBlock.jsx";
+import Button from "../components/UI/Button.jsx";
 
-import { createNewArticle, queryClient } from "../../query_utils/db.js";
+import { createNewArticle, queryClient } from "../query_utils/db.js";
 
 export default function NewArticle() {
   const navigate = useNavigate();

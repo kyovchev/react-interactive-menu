@@ -8,24 +8,20 @@ import {
 } from "react-router-dom";
 import { useQuery, useMutation } from "@tanstack/react-query";
 
-import Header from "../Menu/Header.jsx";
-import ErrorBlock from "../UI/ErrorBlock.jsx";
-import Modal from "../UI/Modal.jsx";
-import Button from "../UI/Button.jsx";
-import { FormActions } from "../UI/Form.jsx";
+import Header from "../components/UI/Header.jsx";
+import ErrorBlock from "../components/UI/ErrorBlock.jsx";
+import Modal from "../components/UI/Modal.jsx";
+import Button from "../components/UI/Button.jsx";
+import { FormActions } from "../components/UI/Form.jsx";
 
-import {
-  fetchArticle,
-  deleteArticle,
-  queryClient,
-} from "../../query_utils/db.js";
-import { QUERY_STALE_TIMES } from "../../../config/config.js";
-import { formatPrice } from "../../utils/formatters.js";
-import { cartActions } from "../../store/cart.js";
+import { fetchArticle, deleteArticle, queryClient } from "../query_utils/db.js";
+import { QUERY_STALE_TIMES } from "../../config/config.js";
+import { formatPrice } from "../utils/formatters.js";
+import { cartActions } from "../store/cart.js";
 
 import styles from "./ArticleDetails.module.css";
 
-export default function ArticleDetails() {
+export default function ArticleDetailsPage() {
   useLayoutEffect(() => window.scrollTo(0, 0), []);
 
   const dispatch = useDispatch();
@@ -179,6 +175,7 @@ export default function ArticleDetails() {
       )}
       <Outlet />
       <Header />
+
       <article className={styles.details}>{content}</article>
     </>
   );

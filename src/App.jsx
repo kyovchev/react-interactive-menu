@@ -4,8 +4,8 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import MenuPage from "./pages/Menu.jsx";
 import Root from "./components/Root/Root.jsx";
 import IntroPage from "./pages/Intro.jsx";
-import ArticleDetails from "./components/Article/ArticleDetails.jsx";
-import NewArticle from "./components/Article/NewArticle.jsx";
+import ArticleDetailsPage from "./pages/ArticleDetails.jsx";
+import NewArticlePage from "./pages/NewArticle.jsx";
 import EditArticle, {
   loader as editArticleLoader,
   action as editArticleAction,
@@ -48,11 +48,11 @@ function App() {
         },
         {
           path: "menu/articles/new",
-          element: <NewArticle />,
+          element: <NewArticlePage />,
         },
         {
           path: "menu/articles/:id",
-          element: <ArticleDetails />,
+          element: <ArticleDetailsPage />,
           children: [
             {
               path: "edit",

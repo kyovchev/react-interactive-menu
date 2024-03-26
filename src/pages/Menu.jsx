@@ -1,6 +1,6 @@
 import { Outlet, useRouteLoaderData, Form } from "react-router-dom";
 
-import Header from "../components/Menu/Header.jsx";
+import Header from "../components/UI/Header.jsx";
 import FindArticlesSection from "../components/Menu/FindArticlesSection.jsx";
 import HotOffersSection from "../components/Menu/HotOffersSection.jsx";
 import Button from "../components/UI/Button.jsx";

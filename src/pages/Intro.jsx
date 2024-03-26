@@ -30,14 +30,14 @@ export default function IntroPage() {
         <p>
           All of the photos used are taken from{" "}
           <a href="https://www.pexels.com/" target="_blank">
-            https://www.pexels.com/
+            Pexels
           </a>
           .
         </p>
         <p>&nbsp;</p>
         <p>
           <Button type="link" style="button" to="/menu">
-            Open Our Interactive Menu
+            Open Menu
           </Button>
         </p>
       </div>
