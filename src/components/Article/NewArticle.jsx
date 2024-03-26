@@ -1,13 +1,12 @@
-import { Link, useNavigate, useRouteLoaderData } from "react-router-dom";
+import { useNavigate, useRouteLoaderData } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 
 import Modal from "../UI/Modal.jsx";
 import ArticleForm from "./ArticleForm.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
+import Button from "../UI/Button.jsx";
 
 import { createNewArticle, queryClient } from "../../query_utils/db.js";
-
-import uiStyles from "../UI/UI.module.css";
 
 export default function NewArticle() {
   const navigate = useNavigate();
@@ -30,12 +29,12 @@ export default function NewArticle() {
         {isPending && "Submitting..."}
         {!isPending && (
           <>
-            <Link to="/menu" className={uiStyles.buttonText}>
+            <Button type="link" style="text" to="/menu">
               Cancel
-            </Link>
-            <button type="submit" className={uiStyles.button}>
+            </Button>
+            <Button type="submit" style="button">
               Create
-            </button>
+            </Button>
           </>
         )}
       </ArticleForm>

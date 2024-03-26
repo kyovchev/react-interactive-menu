@@ -1,9 +1,8 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Modal from "../UI/Modal.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
-
-import uiStyles from "../UI/UI.module.css";
+import Button from "../UI/Button.jsx";
 
 export default function NotFoundBoundary() {
   const navigate = useNavigate();
@@ -16,9 +15,9 @@ export default function NotFoundBoundary() {
       }}
     >
       <ErrorBlock title="An error occured!" message={"Page not found!"} />
-      <Link to="/menu" className={`center ${uiStyles.button}`}>
+      <Button type="link" style="button" to="/menu">
         Go to Home
-      </Link>
+      </Button>
     </Modal>
   );
 }

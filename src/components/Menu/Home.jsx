@@ -1,10 +1,9 @@
-import { Link, Outlet, useRouteLoaderData, Form } from "react-router-dom";
+import { Outlet, useRouteLoaderData, Form } from "react-router-dom";
 
 import Header from "./Header.jsx";
 import FindArticlesSection from "./FindArticlesSection.jsx";
 import HotOffersSection from "./HotOffersSection.jsx";
-
-import uiStyles from "../UI/UI.module.css";
+import Button from "../UI/Button.jsx";
 
 export default function Home() {
   const token = useRouteLoaderData("root");
@@ -14,18 +13,20 @@ export default function Home() {
       <Outlet />
       <Header>
         {!token && (
-          <Link to="/menu/login" className={uiStyles.button}>
+          <Button type="link" style="button" to="/menu/login">
             Login
-          </Link>
+          </Button>
         )}
         {token && (
           <>
             <Form action="/menu/logout" method="post">
-              <button className={uiStyles.button}>Logout</button>
+              <Button type="submit" style="button">
+                Logout
+              </Button>
             </Form>
-            <Link to="/menu/articles/new" className={uiStyles.button}>
+            <Button type="link" style="button" to="/menu/articles/new">
               New Article
-            </Link>
+            </Button>
           </>
         )}
       </Header>

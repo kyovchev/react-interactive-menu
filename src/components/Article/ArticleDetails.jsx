@@ -1,6 +1,5 @@
 import { useState, useLayoutEffect } from "react";
 import {
-  Link,
   Outlet,
   useNavigate,
   useParams,
@@ -11,6 +10,7 @@ import { useQuery, useMutation } from "@tanstack/react-query";
 import Header from "../Menu/Header.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
 import Modal from "../UI/Modal.jsx";
+import Button from "../UI/Button.jsx";
 
 import {
   fetchArticle,
@@ -96,23 +96,21 @@ export default function ArticleDetails() {
       <>
         <header>
           <nav>
-            <button
-              className={uiStyles.button}
+            <Button
+              type="button"
+              style="button"
               onClick={() => navigate("/menu")}
             >
               Back
-            </button>
+            </Button>
             {token && (
               <>
-                <button
-                  onClick={handleStartDelete}
-                  className={uiStyles.buttonText}
-                >
+                <Button type="button" style="text" onClick={handleStartDelete}>
                   Delete
-                </button>
-                <Link to="edit" className={uiStyles.buttonText}>
+                </Button>
+                <Button type="link" style="text" to="edit">
                   Edit
-                </Link>
+                </Button>
               </>
             )}
           </nav>
@@ -143,15 +141,12 @@ export default function ArticleDetails() {
             {isPendingDeletion && <p>Deleting, please wait...</p>}
             {!isPendingDeletion && (
               <>
-                <button
-                  onClick={handleStopDelete}
-                  className={uiStyles.buttonText}
-                >
+                <Button type="button" style="text" onClick={handleStopDelete}>
                   Cancel
-                </button>
-                <button onClick={handleDelete} className={uiStyles.button}>
+                </Button>
+                <Button type="button" style="text" onClick={handleDelete}>
                   Delete
-                </button>
+                </Button>
               </>
             )}
           </div>
@@ -168,9 +163,9 @@ export default function ArticleDetails() {
       )}
       <Outlet />
       <Header>
-        <Link to="/menu" className={uiStyles.button}>
+        <Button type="link" style="button" to="/menu">
           Home
-        </Link>
+        </Button>
       </Header>
       <article className={styles.details}>{content}</article>
     </>

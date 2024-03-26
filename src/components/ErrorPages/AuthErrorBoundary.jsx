@@ -1,9 +1,8 @@
-import { useNavigate, useRouteError, Link } from "react-router-dom";
+import { useNavigate, useRouteError } from "react-router-dom";
 
 import Modal from "../UI/Modal.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
-
-import uiStyles from "../UI/UI.module.css";
+import Button from "../UI/Button.jsx";
 
 export default function AuthErrorBoundary() {
   let error = useRouteError();
@@ -24,9 +23,9 @@ export default function AuthErrorBoundary() {
             : "Connection failed! Please, try again later."
         }
       />
-      <Link to="/menu" className={`center ${uiStyles.button}`}>
+      <Button type="link" style="button" to="/menu">
         Dismiss
-      </Link>
+      </Button>
     </Modal>
   );
 }

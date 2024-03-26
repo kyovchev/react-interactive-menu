@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
+import Button from "../UI/Button";
 
 import introImage from "../../assets/intro.jpg";
 
 import styles from "./Intro.module.css";
-import uiStyles from "../UI/UI.module.css";
 
 export default function Intro() {
   return (
@@ -37,9 +36,9 @@ export default function Intro() {
         </p>
         <p>&nbsp;</p>
         <p>
-          <Link to="/menu" className={uiStyles.button}>
+          <Button type="link" style="button" to="/menu">
             Open Our Interactive Menu
-          </Link>
+          </Button>
         </p>
       </div>
     </section>

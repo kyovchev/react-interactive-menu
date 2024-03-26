@@ -1,13 +1,12 @@
-import { Link, useNavigate, useNavigation, redirect } from "react-router-dom";
+import { useNavigate, useNavigation, redirect } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 
 import Modal from "../UI/Modal.jsx";
 import LoginForm from "./LoginForm.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
+import Button from "../UI/Button.jsx";
 
 import { login } from "../../query_utils/auth.js";
-
-import uiStyles from "../UI/UI.module.css";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -28,12 +27,12 @@ export default function Login() {
         {isSubmitting && "Submitting..."}
         {!isSubmitting && (
           <>
-            <Link to="../" className={uiStyles.buttonText}>
+            <Button type="link" style="text" to="../">
               Cancel
-            </Link>
-            <button type="submit" className={uiStyles.button}>
+            </Button>
+            <Button type="submit" style="button">
               Login
-            </button>
+            </Button>
           </>
         )}
       </LoginForm>

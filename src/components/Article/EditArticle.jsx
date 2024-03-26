@@ -1,5 +1,4 @@
 import {
-  Link,
   redirect,
   useNavigate,
   useParams,
@@ -11,6 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 import Modal from "../UI/Modal.jsx";
 import ArticleForm from "./ArticleForm.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
+import Button from "../UI/Button.jsx";
 
 import {
   fetchArticle,
@@ -18,8 +18,6 @@ import {
   queryClient,
 } from "../../query_utils/db.js";
 import { tokenLoader } from "../../query_utils/auth.js";
-
-import uiStyles from "../UI/UI.module.css";
 
 export default function EditArticle() {
   const navigate = useNavigate();
@@ -54,9 +52,9 @@ export default function EditArticle() {
           }
         />
         <div>
-          <Link to="../" className={uiStyles.button}>
-            Okay
-          </Link>
+          <Button type="link" style="button" to="../">
+            OK
+          </Button>
         </div>
       </>
     );
@@ -69,12 +67,12 @@ export default function EditArticle() {
           <span>Sending data...</span>
         ) : (
           <>
-            <Link to="../" className={uiStyles.buttonText}>
+            <Button type="link" style="text" to="../">
               Cancel
-            </Link>
-            <button type="submit" className={uiStyles.button}>
+            </Button>
+            <Button type="submit" style="button">
               Update
-            </button>
+            </Button>
           </>
         )}
       </ArticleForm>
