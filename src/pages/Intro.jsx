@@ -28,7 +28,7 @@ export default function IntroPage() {
         </p>
         <p>&nbsp;</p>
         <p>
-          All of the photos used are taken from{" "}
+          All the images used are taken from{" "}
           <a href="https://www.pexels.com/" target="_blank">
             Pexels
           </a>
