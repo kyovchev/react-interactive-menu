@@ -1,9 +1,10 @@
 .modal {
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem;
   position: fixed;
-  top: 10vh;
-  left: calc(50% - 15rem);
+  left: 0;
+  top: 1em;
+  max-width: 100%;
   width: 30rem;
   max-height: 80vh;
   background: #e2e5eb;

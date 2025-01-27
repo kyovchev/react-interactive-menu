@@ -5,6 +5,8 @@ import FindArticlesSection from "../components/Menu/FindArticlesSection.jsx";
 import HotOffersSection from "../components/Menu/HotOffersSection.jsx";
 import Button from "../components/UI/Button.jsx";
 
+import styles from "./Menu.module.css";
+
 export default function MenuPage() {
   const token = useRouteLoaderData("root");
 
@@ -13,9 +15,11 @@ export default function MenuPage() {
       <Outlet />
       <Header>
         {!token && (
-          <Button type="link" style="button" to="/menu/login">
-            Login
-          </Button>
+          <div className={styles.button}>
+            <Button type="link" style="button" to="/menu/login">
+              Login
+            </Button>
+          </div>
         )}
         {token && (
           <>
